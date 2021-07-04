@@ -72,7 +72,7 @@
 
     async function getFriendship() {
       const friend = await liff.getFriendship()
-      document.getElementbyId("friendship").append(friend.friendFlag)
+      document.getElementById("friendship").append(friend.friendFlag)
       if(!friend.friendFlag) {
         if(confirm("คุณยังไม่ได้เพิ่ม Bot เป็นเพื่อน จะเพิ่มเลยไหม?")) {
           window.location = "https://line.me/R/ti/p/@675jqxgo"
@@ -147,10 +147,13 @@
 
     async function main() {
       await liff.init({ liffId: "1656174384-VYpO1g7v" })
+      document.getElementById("isLoggedIn").append(Liff.isLoggedIn())
+      if(liff.isLoggedIn()){
       getEnvironment()
       getUserProfile()
       getContext()
       getFriendship()
+      }
       // createUniversalLink()
     }
     main()
