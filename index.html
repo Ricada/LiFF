@@ -67,7 +67,7 @@
 
     async function sendMsg() {
       if(lift.getContext().type !== "none"){
-          await lift.sendMessages{[
+          await lift.sendMessages([
               {
                   "type":"sticker",
                   "stickerid" : 1,
@@ -78,7 +78,7 @@
 
 
 
-          ]}
+          ])
             alert("Message sent")
           
             
