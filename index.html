@@ -66,6 +66,25 @@
     }
 
     async function sendMsg() {
+      if(lift.getContext().type !== "none"){
+          await lift.sendMessages{[
+              {
+                  "type":"sticker",
+                  "stickerid" : 1,
+                  "packageid" : 1
+
+
+              }
+
+
+
+          ]}
+            alert("Message sent")
+          
+            
+         
+
+      }
     }
 
     function getContext() {
